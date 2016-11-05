@@ -5,5 +5,6 @@ records = LOAD '/user/crr41/hw_5/input/1901'
 filtered_records = FILTER records BY temperature != 9999;
 grouped_records = GROUP filtered_records BY date;
 DUMP grouped_records;
-max_temp = FOREACH grouped_records GENERATE $0, group, MAX(filtered_records.temperature);
-DUMP max_temp;
+max_temps = FOREACH grouped_records GENERATE FLATTEN(filtered_records.(station,date)), MAX(filtered_records.temperature);
+grouped_temps = GROUP max_temps BY station;
+DUMP grouped_temps;
