@@ -1,0 +1,16 @@
+README
+------
+This is a readme for assignment 7.
+
+To Run:
+        hive -hiveconf hive.metastore.warehouse.dir=/user/<your_warehouse_path> -f hw_7.hql
+
+Requires:
+    python2
+    cutload.py
+
+The data directory is hardcorded in the hql script and 'input/' should be at the same level
+as the hql script in the directory tree.  Please make any necessary chances you see fit.
+
+The output is in 'out.txt'.  This contains the results of the final query, and not the
+HADOOP output.  All the output from the command is in 'hadoop.out'.

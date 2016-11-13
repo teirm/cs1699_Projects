@@ -1,0 +1,95 @@
+which: no hbase in (/usr/lib64/qt-3.3/bin:/home/PITT/crr41/perl5/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/PITT/crr41/.local/bin:/home/PITT/crr41/bin:/opt/hadoop/bin:/opt/hadoop/bin:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91-2.6.2.1.el7_1.x86_64/bin:/opt/pig/bin:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91-2.6.2.1.el7_1.x86_64/bin:/opt/hive/bin)
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/apache-hive-2.1.0-bin/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop-2.7.2/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+
+Logging initialized using configuration in jar:file:/opt/apache-hive-2.1.0-bin/lib/hive-common-2.1.0.jar!/hive-log4j2.properties Async: true
+OK
+Time taken: 4.188 seconds
+OK
+Time taken: 0.275 seconds
+OK
+Time taken: 0.17 seconds
+OK
+Time taken: 42.807 seconds
+Loading data to table default.temperature_raw_data
+OK
+Time taken: 0.705 seconds
+Added resources: [cutload.py]
+OK
+Time taken: 0.116 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
+Query ID = crr41_20161113110440_0ce41e76-a1dd-488a-aa09-b622c1586284
+Total jobs = 3
+Launching Job 1 out of 3
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1478014484229_1275, Tracking URL = http://had6110.cs.pitt.edu:8088/proxy/application_1478014484229_1275/
+Kill Command = /opt/hadoop-2.7.2/bin/hadoop job  -kill job_1478014484229_1275
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2016-11-13 11:05:34,506 Stage-1 map = 0%,  reduce = 0%
+2016-11-13 11:05:38,789 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.97 sec
+MapReduce Total cumulative CPU time: 1 seconds 970 msec
+Ended Job = job_1478014484229_1275
+Stage-4 is selected by condition resolver.
+Stage-3 is filtered out by condition resolver.
+Stage-5 is filtered out by condition resolver.
+Moving data to directory hdfs://had6110.cs.pitt.edu:8020/user/crr41/warehouse/temperature_data/.hive-staging_hive_2016-11-13_11-05-28_351_2047134783978277308-1/-ext-10000
+Loading data to table default.temperature_data
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1   Cumulative CPU: 1.97 sec   HDFS Read: 1782540 HDFS Write: 362757 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 970 msec
+OK
+Time taken: 12.908 seconds
+OK
+Time taken: 0.085 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
+Query ID = crr41_20161113110440_0ce41e76-a1dd-488a-aa09-b622c1586284
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+set mapreduce.job.reduces=<number>
+Starting Job = job_1478014484229_1276, Tracking URL = http://had6110.cs.pitt.edu:8088/proxy/application_1478014484229_1276/
+Kill Command = /opt/hadoop-2.7.2/bin/hadoop job  -kill job_1478014484229_1276
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2016-11-13 11:05:46,821 Stage-1 map = 0%,  reduce = 0%
+2016-11-13 11:05:52,096 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.85 sec
+2016-11-13 11:05:56,300 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.33 sec
+MapReduce Total cumulative CPU time: 3 seconds 330 msec
+Ended Job = job_1478014484229_1276
+Loading data to table default.max_temperatures
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 3.33 sec   HDFS Read: 374928 HDFS Write: 112144 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 330 msec
+OK
+Time taken: 17.298 seconds
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
+Query ID = crr41_20161113110440_0ce41e76-a1dd-488a-aa09-b622c1586284
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+set mapreduce.job.reduces=<number>
+Starting Job = job_1478014484229_1277, Tracking URL = http://had6110.cs.pitt.edu:8088/proxy/application_1478014484229_1277/
+Kill Command = /opt/hadoop-2.7.2/bin/hadoop job  -kill job_1478014484229_1277
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2016-11-13 11:06:02,964 Stage-1 map = 0%,  reduce = 0%
+2016-11-13 11:06:08,220 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.14 sec
+2016-11-13 11:06:12,403 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.66 sec
+MapReduce Total cumulative CPU time: 2 seconds 660 msec
+Ended Job = job_1478014484229_1277
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 2.66 sec   HDFS Read: 122617 HDFS Write: 76526 SUCCESS
+Total MapReduce CPU Time Spent: 2 seconds 660 msec
+OK
+Time taken: 14.851 seconds, Fetched: 2190 row(s)
